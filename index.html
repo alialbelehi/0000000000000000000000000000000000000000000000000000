@@ -196,6 +196,17 @@
             color: var(--gray) !important;
         }
 
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
         /* Buttons */
         .btn {
             background: var(--primary);
@@ -1615,7 +1626,7 @@
         </div>
         <h1>Frontiers Language School</h1>
         <p class="tagline">Empowering minds through language and innovation</p>
-        <p>Principal: Yosser Zaid</p>
+        <p>Principal: Yosser Zaid | <a href="mailto:alialbelehi13@gmail.com?subject=Question%20for%20Principal" style="color: var(--primary);">Email Principal</a></p>
         
         <div class="features">
             <div class="feature">
@@ -1651,6 +1662,10 @@
             <button class="btn btn-accent" onclick="showSchoolInfo()">
                 About Us <i class="fas fa-info-circle"></i>
             </button>
+        </div>
+
+        <div class="contact-info" style="margin-top: 20px;">
+            <p>Need help? <a href="mailto:alialbelehi13@gmail.com?subject=Frontiers%20Language%20School%20Inquiry" style="color: var(--primary); font-weight: 500;">Contact our admissions team</a></p>
         </div>
     </div>
 
@@ -2104,6 +2119,7 @@
                 <li>Document submission</li>
                 <li>Final registration</li>
             </ol>
+            <p style="margin-top: 15px;">Questions? <a href="mailto:alialbelehi13@gmail.com?subject=Registration%20Follow-Up" style="color: var(--primary);">Email us</a></p>
         </div>
         <button class="btn" onclick="closeSuccessMessage()">
             Continue <i class="fas fa-arrow-right"></i>
