@@ -1598,7 +1598,7 @@
 <body>
     <!-- Loading Screen -->
     <div class="loading-screen">
-        <img src="logo.png" alt="School Logo" class="loading-logo">
+        <img src="logo-removebg-preview.png" alt="School Logo" class="loading-logo">
         <div class="loading-bar">
             <div class="loading-progress"></div>
         </div>
@@ -1626,7 +1626,7 @@
     <!-- Start Screen -->
     <div id="start-screen" class="screen hidden">
         <div class="logo">
-            <img src="logo.png" alt="School Logo" class="logo-img">
+            <img src="logo-removebg-preview.png" alt="School Logo" class="logo-img">
         </div>
         <h1>Frontiers Language School</h1>
         <p class="tagline">Empowering minds through language and innovation</p>
@@ -1933,7 +1933,6 @@
             <button class="tab-btn active" onclick="openTab(event, 'mission')">Mission</button>
             <button class="tab-btn" onclick="openTab(event, 'curriculum')">Curriculum</button>
             <button class="tab-btn" onclick="openTab(event, 'facilities')">Facilities</button>
-            <button class="tab-btn" onclick="openTab(event, 'staff')">Staff</button>
         </div>
         
         <div id="mission" class="tab-content active">
@@ -1976,7 +1975,6 @@
                                     <li>Language development in English and Arabic</li>
                                     <li>Early math and science concepts</li>
                                     <li>Creative arts and music</li>
-                                    <li>Physical education and motor skills</li>
                                     <li>Social-emotional learning</li>
                                 </ul>
                             </div>
@@ -1985,7 +1983,7 @@
                     
                     <div class="accordion-item">
                         <div class="accordion-header" onclick="toggleAccordion(this)">
-                            Elementary School (Grades 1-5)
+                            Elementary School (Grades 1-6)
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-content-inner">
@@ -1996,7 +1994,7 @@
                                     <li>Mathematics</li>
                                     <li>Science</li>
                                     <li>Social Studies</li>
-                                    <li>Computer Science</li>
+                                    <li>Computer technology (ICT)</li>
                                     <li>French/German (starting Grade 3)</li>
                                 </ul>
                             </div>
@@ -2005,7 +2003,7 @@
                     
                     <div class="accordion-item">
                         <div class="accordion-header" onclick="toggleAccordion(this)">
-                            Middle School (Grades 6-8)
+                            Middle School (Grades 7-9)
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-content-inner">
@@ -2016,7 +2014,7 @@
                                     <li>Life and Physical Sciences</li>
                                     <li>World History and Geography</li>
                                     <li>Second Foreign Language (French/German)</li>
-                                    <li>Electives in Arts and Technology</li>
+                                    <li>Art and Computer technology (ICT)</li>
                                 </ul>
                             </div>
                         </div>
@@ -2024,7 +2022,7 @@
                     
                     <div class="accordion-item">
                         <div class="accordion-header" onclick="toggleAccordion(this)">
-                            High School (Grades 9-12)
+                            High School (Grades 10-12)
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-content-inner">
@@ -2052,55 +2050,21 @@
                 <div class="photo-gallery">
                     <h4>School Garden</h4>
                     <div class="photos">
-                        <img src="Pic/Garden3.jpg" class="img-thumbnail" alt="School Garden" onclick="openLightbox(this.src, 'Our peaceful school garden')">
-                        <img src="Pic/Garden4.jpg" class="img-thumbnail" alt="School Garden" onclick="openLightbox(this.src, 'Outdoor learning spaces')">
+                        <img src="pic/pic/garden.jpg" class="img-thumbnail" alt="School Garden" onclick="openLightbox(this.src, 'Our peaceful school garden')">
+                        <img src="pic/pic/garden(1).jpg" class="img-thumbnail" alt="School Garden" onclick="openLightbox(this.src, 'Outdoor learning spaces')">
                     </div>
 
                     <h4>Classrooms</h4>
                     <div class="photos">
-                        <img src="Pic/Classroom1.jpg" class="img-thumbnail" alt="Classrooms" onclick="openLightbox(this.src, 'Modern, technology-equipped classrooms')">
-                        <img src="Pic/Classroom2.jpg" class="img-thumbnail" alt="Classrooms" onclick="openLightbox(this.src, 'Interactive learning environment')">
+                        <img src="pic/pic/classes.jpg" class="img-thumbnail" alt="Classrooms" onclick="openLightbox(this.src, 'Modern, technology-equipped classrooms')">
+                        <img src="pic/pic/M2.jpg" class="img-thumbnail" alt="Classrooms" onclick="openLightbox(this.src, 'Interactive learning environment')">
                     </div>
 
-                    <h4>Specialty Rooms</h4>
-                    <div class="photos">
-                        <img src="Pic/Lab1.jpg" class="img-thumbnail" alt="Science Lab" onclick="openLightbox(this.src, 'Fully-equipped science laboratory')">
-                        <img src="Pic/Library1.jpg" class="img-thumbnail" alt="Library" onclick="openLightbox(this.src, 'School library with extensive resources')">
-                        <img src="Pic/Art1.jpg" class="img-thumbnail" alt="Art Room" onclick="openLightbox(this.src, 'Creative arts studio')">
-                    </div>
+                    
                 </div>
             </div>
         </div>
-        
-        <div id="staff" class="tab-content">
-            <div class="card">
-                <h3>Meet Our Team</h3>
-                <p>Our dedicated faculty brings together international experience and local expertise to provide an exceptional educational experience.</p>
-                
-                <div class="features">
-                    <div class="feature">
-                        <img src="https://randomuser.me/api/portraits/women/43.jpg" class="rounded-circle" width="100" height="100" alt="Principal">
-                        <h4>Yosser Zaid</h4>
-                        <p class="text-muted">Principal</p>
-                        <p>MA in Educational Leadership, 15 years experience</p>
-                    </div>
-                    <div class="feature">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle" width="100" height="100" alt="Vice Principal">
-                        <h4>Mohamed Ahmed</h4>
-                        <p class="text-muted">Vice Principal</p>
-                        <p>PhD in Curriculum Development, 12 years experience</p>
-                    </div>
-                    <div class="feature">
-                        <img src="https://randomuser.me/api/portraits/women/65.jpg" class="rounded-circle" width="100" height="100" alt="Head of English">
-                        <h4>Sarah Johnson</h4>
-                        <p class="text-muted">Head of English</p>
-                        <p>MA in English Literature, 10 years experience</p>
-                    </div>
-                </div>
-                
-                <div class="alert alert-info">
-                    <i class="fas fa-info-circle"></i> Our faculty maintains an average student-teacher ratio of 10:1, ensuring personalized attention for every student.
-                </div>
+    
             </div>
         </div>
         
@@ -2117,7 +2081,7 @@
         <div class="card">
             <div class="embed-responsive" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
                 <iframe 
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1" 
+                    src="https://youtu.be/hbiepgIoTFE?si=AiBiTiguKxfVM-Yt" 
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen>
@@ -2126,45 +2090,13 @@
             <div class="card-body">
                 <h4>Take a Guided Tour</h4>
                 <p>Our virtual tour showcases all aspects of campus life, including classrooms, laboratories, library, sports facilities, and more.</p>
-                
-                <div class="btn-group">
-                    <button class="btn btn-sm" onclick="showTourSection('classrooms')">
-                        <i class="fas fa-chalkboard"></i> Classrooms
-                    </button>
-                    <button class="btn btn-sm" onclick="showTourSection('labs')">
-                        <i class="fas fa-flask"></i> Labs
-                    </button>
-                    <button class="btn btn-sm" onclick="showTourSection('library')">
-                        <i class="fas fa-book"></i> Library
-                    </button>
-                    <button class="btn btn-sm" onclick="showTourSection('sports')">
-                        <i class="fas fa-running"></i> Sports
-                    </button>
-                </div>
+            
             </div>
         </div>
         
         <div class="features">
             <div class="feature">
-                <div class="feature-icon">
-                    <i class="fas fa-map-marked-alt"></i>
-                </div>
-                <h4>Campus Map</h4>
-                <p>Interactive map showing all facilities and points of interest</p>
-                <button class="btn btn-sm btn-secondary" onclick="showCampusMap()">
-                    View Map
-                </button>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">
-                    <i class="fas fa-calendar-alt"></i>
-                </div>
-                <h4>Open Days</h4>
-                <p>Schedule an in-person visit during our open house events</p>
-                <button class="btn btn-sm btn-secondary" onclick="showOpenDays()">
-                    View Dates
-                </button>
-            </div>
+                
         </div>
         
         <button class="btn btn-secondary" onclick="goBack()">
@@ -2715,6 +2647,7 @@
             document.getElementById(tabName).classList.add('active');
             evt.currentTarget.classList.add('active');
         }
+    
 
         // Accordion
         function toggleAccordion(header) {
