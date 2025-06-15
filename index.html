@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontiers Language School Registration</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <style>
-        /* ====== Enhanced CSS with 75+ Improvements ====== */
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         :root {
             --primary: #4A90E2;
             --primary-dark: #2a6fc9;
@@ -16,14 +22,14 @@
             --secondary-dark: #e05548;
             --accent: #6a11cb;
             --accent-light: #8a2be2;
-            --success: #28a745;
-            --warning: #ffc107;
-            --danger: #dc3545;
-            --info: #17a2b8;
             --dark: #333;
             --darker: #222;
             --light: #f8f9fa;
             --lighter: #fff;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --info: #17a2b8;
             --gray: #6c757d;
             --gray-light: #e9ecef;
             --white: #ffffff;
@@ -45,29 +51,7 @@
             --darker: #f8f9fa;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, var(--accent), var(--primary));
-            margin: 0;
-            padding: 0;
-            color: var(--dark);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            overflow-x: hidden;
-            transition: background 0.5s ease;
-            line-height: 1.6;
-        }
-
-        /* ===== Loading Screen ===== */
+        /* Loading Screen */
         .loading-screen {
             position: fixed;
             top: 0;
@@ -116,14 +100,20 @@
             animation: fadeIn 0.5s 0.5s forwards;
         }
 
-        /* ===== Main Content ===== */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            padding: 20px;
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            transition: background 0.3s ease;
         }
 
         .screen {
@@ -157,12 +147,11 @@
             display: none !important;
         }
 
-        /* ===== Typography ===== */
+        /* Typography */
         h1, h2, h3, h4, h5, h6 {
             color: var(--primary);
             margin-bottom: 15px;
             font-weight: 600;
-            line-height: 1.2;
         }
 
         h1 {
@@ -171,6 +160,7 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
+            line-height: 1.2;
         }
 
         h2 {
@@ -198,6 +188,7 @@
 
         p {
             color: var(--gray);
+            line-height: 1.7;
             margin-bottom: 20px;
         }
 
@@ -205,11 +196,18 @@
             color: var(--gray) !important;
         }
 
-        .text-center {
-            text-align: center;
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition-fast);
         }
 
-        /* ===== Buttons ===== */
+        a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        /* Buttons */
         .btn {
             background: var(--primary);
             color: var(--white);
@@ -228,7 +226,6 @@
             position: relative;
             overflow: hidden;
             text-decoration: none;
-            text-transform: capitalize;
         }
 
         .btn::after {
@@ -324,15 +321,7 @@
             justify-content: center;
         }
 
-        .btn-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            margin: 15px 0;
-        }
-
-        /* ===== Form Elements ===== */
+        /* Form Elements */
         .form-group {
             margin-bottom: 20px;
             text-align: left;
@@ -478,7 +467,7 @@
             color: var(--gray);
         }
 
-        /* ===== Alerts ===== */
+        /* Alert Messages */
         .alert {
             padding: 15px;
             border-radius: var(--border-radius);
@@ -548,7 +537,7 @@
             border-left-color: var(--primary);
         }
 
-        /* ===== Cards ===== */
+        /* Card Styles */
         .card {
             background: var(--white);
             border-radius: var(--border-radius-lg);
@@ -619,7 +608,7 @@
             margin-left: 1.25rem;
         }
 
-        /* ===== Gallery ===== */
+        /* Gallery Styles */
         .photo-gallery {
             margin-top: 30px;
         }
@@ -648,7 +637,7 @@
             margin-bottom: 30px;
         }
 
-        /* ===== Images ===== */
+        /* Image Styles */
         .img-thumbnail {
             width: 100%;
             height: 150px;
@@ -684,7 +673,7 @@
             border-radius: 50% !important;
         }
 
-        /* ===== Lightbox ===== */
+        /* Lightbox Styles */
         .lightbox {
             display: none;
             position: fixed;
@@ -771,7 +760,7 @@
             transform: scale(1.1);
         }
 
-        /* ===== Testimonials ===== */
+        /* Testimonials */
         .testimonials {
             margin: 40px 0;
         }
@@ -812,7 +801,7 @@
             color: var(--gray);
         }
 
-        /* ===== Features ===== */
+        /* Features Grid */
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -839,7 +828,7 @@
             margin-bottom: 15px;
         }
 
-        /* ===== Progress Bar ===== */
+        /* Progress Bar */
         .progress-container {
             width: 100%;
             background: var(--gray-light);
@@ -856,7 +845,7 @@
             transition: width 0.6s ease;
         }
 
-        /* ===== Tooltip ===== */
+        /* Tooltip */
         .tooltip {
             position: relative;
             display: inline-block;
@@ -896,7 +885,7 @@
             opacity: 1;
         }
 
-        /* ===== Floating Action Button ===== */
+        /* Floating Action Button */
         .fab {
             position: fixed;
             bottom: 30px;
@@ -929,7 +918,7 @@
             box-shadow: 0 8px 25px rgba(74, 144, 226, 0.5);
         }
 
-        /* ===== Device Warning ===== */
+        /* Device Warning Message */
         .device-warning {
             position: fixed;
             top: 0;
@@ -945,7 +934,7 @@
             display: none;
         }
 
-        /* ===== Cookie Consent ===== */
+        /* Cookie Consent Banner */
         .cookie-consent {
             position: fixed;
             bottom: 0;
@@ -988,7 +977,7 @@
             background: var(--primary-dark);
         }
 
-        /* ===== Success Message ===== */
+        /* Success Message */
         .success-message {
             position: fixed;
             top: 50%;
@@ -1019,7 +1008,7 @@
             animation: bounceIn 0.8s;
         }
 
-        /* ===== Modal ===== */
+        /* Modal */
         .modal {
             position: fixed;
             top: 0;
@@ -1086,12 +1075,11 @@
             transform: rotate(90deg);
         }
 
-        /* ===== Tabs ===== */
+        /* Tabs */
         .tabs {
             display: flex;
             border-bottom: 1px solid var(--gray-light);
             margin-bottom: 20px;
-            overflow-x: auto;
         }
 
         .tab-btn {
@@ -1103,7 +1091,6 @@
             font-weight: 500;
             color: var(--gray);
             transition: all 0.3s ease;
-            white-space: nowrap;
         }
 
         .tab-btn.active {
@@ -1119,7 +1106,7 @@
             display: block;
         }
 
-        /* ===== Accordion ===== */
+        /* Accordion */
         .accordion-item {
             margin-bottom: 10px;
             border: 1px solid var(--gray-light);
@@ -1164,7 +1151,7 @@
             padding: 15px;
         }
 
-        /* ===== Badges ===== */
+        /* Badges */
         .badge {
             display: inline-block;
             padding: 0.35em 0.65em;
@@ -1203,7 +1190,47 @@
             background-color: var(--info);
         }
 
-        /* ===== Timeline ===== */
+        /* Swiper */
+        .swiper {
+            width: 100%;
+            height: 100%;
+            margin: 20px 0;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--gray);
+            opacity: 0.5;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--primary);
+            opacity: 1;
+        }
+
+        .swiper-button-next, .swiper-button-prev {
+            color: var(--primary);
+        }
+
+        /* Timeline */
         .timeline {
             position: relative;
             max-width: 1200px;
@@ -1288,7 +1315,7 @@
             box-shadow: var(--shadow);
         }
 
-        /* ===== Theme Toggle ===== */
+        /* Dark Mode Toggle */
         .theme-toggle {
             position: fixed;
             top: 20px;
@@ -1319,7 +1346,7 @@
             color: var(--dark);
         }
 
-        /* ===== Language Selector ===== */
+        /* Language Selector */
         .language-selector {
             position: fixed;
             top: 70px;
@@ -1347,25 +1374,7 @@
             transform: scale(1.1);
         }
 
-        /* ===== Responsive Design ===== */
-        @media (max-width: 992px) {
-            .screen {
-                padding: 30px;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            h2 {
-                font-size: 1.8rem;
-            }
-            
-            .features {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
+        /* Responsive Design */
         @media (max-width: 768px) {
             .screen {
                 padding: 25px;
@@ -1414,7 +1423,7 @@
             }
         }
 
-        @media (max-width: 576px) {
+        @media (max-width: 480px) {
             .screen {
                 padding: 20px;
             }
@@ -1436,21 +1445,9 @@
             .modal-content {
                 padding: 20px;
             }
-            
-            .tabs {
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-                -ms-overflow-style: -ms-autohiding-scrollbar;
-            }
-            
-            .tab-btn {
-                padding: 10px 15px;
-                font-size: 0.9rem;
-            }
         }
 
-        /* ===== Animations ===== */
+        /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -1553,10 +1550,9 @@
             20%, 40%, 60%, 80% { transform: translateX(5px); }
         }
 
-        /* ===== Custom Scrollbar ===== */
+        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 10px;
-            height: 8px;
         }
 
         ::-webkit-scrollbar-track {
@@ -1572,7 +1568,7 @@
             background: var(--primary-dark);
         }
 
-        /* ===== Confetti ===== */
+        /* Confetti */
         .confetti {
             position: fixed;
             width: 10px;
@@ -1630,7 +1626,7 @@
         </div>
         <h1>Frontiers Language School</h1>
         <p class="tagline">Empowering minds through language and innovation</p>
-        <p>Principal: Yosser Zaid</p>
+        <p>Principal: Yosser Zaid | <a href="mailto:alialbelehi13@gmail.com?subject=Question%20for%20Principal" style="color: var(--primary);">Email Principal</a></p>
         
         <div class="features">
             <div class="feature">
@@ -1666,9 +1662,10 @@
             <button class="btn btn-accent" onclick="showSchoolInfo()">
                 About Us <i class="fas fa-info-circle"></i>
             </button>
-            <a href="mailto:alialbelehi13@gmail.com" class="btn btn-success">
-                Contact Us <i class="fas fa-envelope"></i>
-            </a>
+        </div>
+
+        <div class="contact-info" style="margin-top: 20px;">
+            <p>Need help? <a href="mailto:alialbelehi13@gmail.com?subject=Frontiers%20Language%20School%20Inquiry" style="color: var(--primary); font-weight: 500;">Contact our admissions team</a></p>
         </div>
     </div>
 
@@ -1683,7 +1680,7 @@
             </div>
         </div>
         
-        <form id="registration" onsubmit="sendFormByEmail(); return false;">
+        <form id="registration" novalidate>
             <div class="alert alert-warning alert-dismissible">
                 <i class="fas fa-exclamation-circle"></i> All fields marked with * are required
                 <button type="button" class="close" onclick="this.parentElement.style.display='none'">&times;</button>
@@ -1791,7 +1788,7 @@
             </div>
 
             <div class="form-group">
-                <label for="how-heard">How did you hear about us?</label>
+                <label for="how-heard">How did you hear  us?</label>
                 <select id="how-heard" class="form-control" name="how-heard">
                     <option value="">Select Option</option>
                     <option value="Friend/Family">Friend or Family</option>
@@ -1926,14 +1923,13 @@
 
     <!-- School Info Screen -->
     <div id="school-info-screen" class="screen hidden">
-        <h2>About Our School</h2>
+        <h2> About Our School</h2>
         <p>Founded in 2010, Frontiers Language School has established itself as a leader in bilingual education, combining international standards with local cultural values.</p>
         
         <div class="tabs">
             <button class="tab-btn active" onclick="openTab(event, 'mission')">Mission</button>
             <button class="tab-btn" onclick="openTab(event, 'curriculum')">Curriculum</button>
             <button class="tab-btn" onclick="openTab(event, 'facilities')">Facilities</button>
-            <button class="tab-btn" onclick="openTab(event, 'staff')">Staff</button>
         </div>
         
         <div id="mission" class="tab-content active">
@@ -1957,6 +1953,9 @@
                     <li><strong>Diversity:</strong> Celebrating and learning from our multicultural environment</li>
                 </ul>
             </div>
+            <button class="btn" onclick="closeSuccessMessage()">
+            Back to Home <i class="fas fa-arrow-right"></i>
+        </button>
         </div>
         
         <div id="curriculum" class="tab-content">
@@ -1976,8 +1975,6 @@
                                     <li>Language development in English and Arabic</li>
                                     <li>Early math and science concepts</li>
                                     <li>Creative arts and music</li>
-                                    <li>Physical education and motor skills</li>
-                                    <li>Social-emotional learning</li>
                                 </ul>
                             </div>
                         </div>
@@ -1985,19 +1982,19 @@
                     
                     <div class="accordion-item">
                         <div class="accordion-header" onclick="toggleAccordion(this)">
-                            Elementary School (Grades 1-5)
+                            Elementary School (Grades 1-6)
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-content-inner">
                                 <p>Building strong foundations in core subjects while encouraging curiosity and independent thinking.</p>
                                 <ul>
-                                    <li>English Language Arts</li>
+                                    <li>English Language</li>
                                     <li>Arabic Language</li>
                                     <li>Mathematics</li>
                                     <li>Science</li>
                                     <li>Social Studies</li>
                                     <li>Computer Science</li>
-                                    <li>French/German (starting Grade 3)</li>
+                                    <li>French ( grade 2 )/German ( grade 3 )</li>
                                 </ul>
                             </div>
                         </div>
@@ -2005,7 +2002,7 @@
                     
                     <div class="accordion-item">
                         <div class="accordion-header" onclick="toggleAccordion(this)">
-                            Middle School (Grades 6-8)
+                            Middle School (Grades 7-9)
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-content-inner">
@@ -2013,10 +2010,10 @@
                                 <ul>
                                     <li>Advanced English and Arabic</li>
                                     <li>Algebra and Geometry</li>
-                                    <li>Life and Physical Sciences</li>
+                                    <li>Chemistry, Physics and Biology Sciences</li>
                                     <li>World History and Geography</li>
                                     <li>Second Foreign Language (French/German)</li>
-                                    <li>Electives in Arts and Technology</li>
+                                    <li>Art and Computer Technology ( ICT )</li>
                                 </ul>
                             </div>
                         </div>
@@ -2024,7 +2021,7 @@
                     
                     <div class="accordion-item">
                         <div class="accordion-header" onclick="toggleAccordion(this)">
-                            High School (Grades 9-12)
+                            High School (Grades 10-12)
                         </div>
                         <div class="accordion-content">
                             <div class="accordion-content-inner">
@@ -2052,61 +2049,24 @@
                 <div class="photo-gallery">
                     <h4>School Garden</h4>
                     <div class="photos">
-                        <img src="Pic/Garden3.jpg" class="img-thumbnail" alt="School Garden" onclick="openLightbox(this.src, 'Our peaceful school garden')">
-                        <img src="Pic/Garden4.jpg" class="img-thumbnail" alt="School Garden" onclick="openLightbox(this.src, 'Outdoor learning spaces')">
+                        <img src="pic/pic/garden.jpg" class="img-thumbnail" alt="School Garden" onclick="openLightbox(this.src, 'Our peaceful school garden')">
+                        <img src="pic/pic/garden(1).jpg" class="img-thumbnail" alt="School Garden" onclick="openLightbox(this.src, 'Outdoor learning spaces')">
                     </div>
 
                     <h4>Classrooms</h4>
                     <div class="photos">
-                        <img src="Pic/Classroom1.jpg" class="img-thumbnail" alt="Classrooms" onclick="openLightbox(this.src, 'Modern, technology-equipped classrooms')">
-                        <img src="Pic/Classroom2.jpg" class="img-thumbnail" alt="Classrooms" onclick="openLightbox(this.src, 'Interactive learning environment')">
+                        <img src="pic/pic/classes.jpg" class="img-thumbnail" alt="Classrooms" onclick="openLightbox(this.src, 'Modern, technology-equipped classrooms')">
+                        <img src="pic/pic/M2.jpg" class="img-thumbnail" alt="Classrooms" onclick="openLightbox(this.src, 'Interactive learning environment')">
                     </div>
 
-                    <h4>Specialty Rooms</h4>
-                    <div class="photos">
-                        <img src="Pic/Lab1.jpg" class="img-thumbnail" alt="Science Lab" onclick="openLightbox(this.src, 'Fully-equipped science laboratory')">
-                        <img src="Pic/Library1.jpg" class="img-thumbnail" alt="Library" onclick="openLightbox(this.src, 'School library with extensive resources')">
-                        <img src="Pic/Art1.jpg" class="img-thumbnail" alt="Art Room" onclick="openLightbox(this.src, 'Creative arts studio')">
+                    
                     </div>
                 </div>
             </div>
         </div>
         
-        <div id="staff" class="tab-content">
-            <div class="card">
-                <h3>Meet Our Team</h3>
-                <p>Our dedicated faculty brings together international experience and local expertise to provide an exceptional educational experience.</p>
-                
-                <div class="features">
-                    <div class="feature">
-                        <img src="https://randomuser.me/api/portraits/women/43.jpg" class="rounded-circle" width="100" height="100" alt="Principal">
-                        <h4>Yosser Zaid</h4>
-                        <p class="text-muted">Principal</p>
-                        <p>MA in Educational Leadership, 15 years experience</p>
-                    </div>
-                    <div class="feature">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle" width="100" height="100" alt="Vice Principal">
-                        <h4>Mohamed Ahmed</h4>
-                        <p class="text-muted">Vice Principal</p>
-                        <p>PhD in Curriculum Development, 12 years experience</p>
-                    </div>
-                    <div class="feature">
-                        <img src="https://randomuser.me/api/portraits/women/65.jpg" class="rounded-circle" width="100" height="100" alt="Head of English">
-                        <h4>Sarah Johnson</h4>
-                        <p class="text-muted">Head of English</p>
-                        <p>MA in English Literature, 10 years experience</p>
-                    </div>
-                </div>
-                
-                <div class="alert alert-info">
-                    <i class="fas fa-info-circle"></i> Our faculty maintains an average student-teacher ratio of 10:1, ensuring personalized attention for every student.
-                </div>
-            </div>
-        </div>
         
-        <button class="btn btn-secondary" onclick="goBack()">
-            <i class="fas fa-arrow-left"></i> Back to Home
-        </button>
+       
     </div>
 
     <!-- Virtual Tour Screen -->
@@ -2115,56 +2075,28 @@
         <p>Explore our facilities from the comfort of your home with our interactive 360° virtual tour</p>
         
         <div class="card">
-            <div class="embed-responsive" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                <iframe 
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1" 
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
+    <div class="embed-responsive" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe 
+            src="https://youtu.be/hbiepgIoTFE" 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    <div class="card-body">
+        <h4>Our School</h4>
+    </div>
+</div>
             <div class="card-body">
                 <h4>Take a Guided Tour</h4>
                 <p>Our virtual tour showcases all aspects of campus life, including classrooms, laboratories, library, sports facilities, and more.</p>
                 
-                <div class="btn-group">
-                    <button class="btn btn-sm" onclick="showTourSection('classrooms')">
-                        <i class="fas fa-chalkboard"></i> Classrooms
-                    </button>
-                    <button class="btn btn-sm" onclick="showTourSection('labs')">
-                        <i class="fas fa-flask"></i> Labs
-                    </button>
-                    <button class="btn btn-sm" onclick="showTourSection('library')">
-                        <i class="fas fa-book"></i> Library
-                    </button>
-                    <button class="btn btn-sm" onclick="showTourSection('sports')">
-                        <i class="fas fa-running"></i> Sports
-                    </button>
-                </div>
+                
             </div>
         </div>
         
         <div class="features">
-            <div class="feature">
-                <div class="feature-icon">
-                    <i class="fas fa-map-marked-alt"></i>
-                </div>
-                <h4>Campus Map</h4>
-                <p>Interactive map showing all facilities and points of interest</p>
-                <button class="btn btn-sm btn-secondary" onclick="showCampusMap()">
-                    View Map
-                </button>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">
-                    <i class="fas fa-calendar-alt"></i>
-                </div>
-                <h4>Open Days</h4>
-                <p>Schedule an in-person visit during our open house events</p>
-                <button class="btn btn-sm btn-secondary" onclick="showOpenDays()">
-                    View Dates
-                </button>
-            </div>
+            
         </div>
         
         <button class="btn btn-secondary" onclick="goBack()">
@@ -2187,6 +2119,7 @@
                 <li>Document submission</li>
                 <li>Final registration</li>
             </ol>
+            <p style="margin-top: 15px;">Questions? <a href="mailto:alialbelehi13@gmail.com?subject=Registration%20Follow-Up" style="color: var(--primary);">Email us</a></p>
         </div>
         <button class="btn" onclick="closeSuccessMessage()">
             Continue <i class="fas fa-arrow-right"></i>
@@ -2220,6 +2153,7 @@
                     <input type="checkbox" id="modal-terms" name="modal-terms">
                     <label for="modal-terms">I have read and agree to these terms and conditions</label>
                 </div>
+                
             </div>
             <div class="modal-footer">
                 <button class="btn" onclick="acceptTerms()">
@@ -2229,7 +2163,9 @@
                     Close
                 </button>
             </div>
+            
         </div>
+        
     </div>
 
     <!-- Campus Map Modal -->
@@ -2296,10 +2232,8 @@
         <button class="close-modal" onclick="this.parentElement.style.display='none'" style="font-size: 1rem; padding: 0 10px;">&times;</button>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
-        // ====== Enhanced JavaScript with 75+ Improvements ======
-        
         // Loading Screen
         window.addEventListener('load', function() {
             setTimeout(function() {
@@ -2384,11 +2318,9 @@
         // Language Toggle
         const languageToggle = document.getElementById('languageToggle');
         languageToggle.addEventListener('click', function() {
+            // This would be expanded with actual language switching functionality
             const currentLang = languageToggle.textContent;
-            languageToggle.textContent = currentLang === 'EN' ? 'AR' : 'EN';
             
-            // In a real implementation, we would switch all text content
-            alert('Language switching functionality would be implemented here');
         });
 
         // Navigation Functions
@@ -2547,50 +2479,41 @@
             }, 2000);
         }
 
-        // Form Handling with mailto
-        function sendFormByEmail() {
-            if (!validateForm()) return;
+        // Form Handling
+        const form = document.getElementById('registration');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
             
-            const form = document.getElementById('registration');
-            const formData = new FormData(form);
-            let emailBody = "New Student Registration:\n\n";
-            
-            // Format form data for email
-            formData.forEach((value, key) => {
-                // Skip unchecked checkboxes
-                if (key === 'newsletter' && !formData.has(key)) return;
+            if (validateForm()) {
+                // In a real implementation, this would send data to a server
+                // For demo purposes, we'll simulate form submission
                 
-                // Format field names nicely
-                const fieldName = key.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-                emailBody += `${fieldName}: ${value}\n`;
-            });
-            
-            // Create mailto link
-            const subject = "New Registration - Frontiers Language School";
-            const mailtoLink = `mailto:alialbelehi13@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-            
-            // Open user's email client
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            setTimeout(function() {
-                document.getElementById('success-message').classList.add('active');
-                createConfetti();
+                // Show loading state
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+                submitBtn.disabled = true;
                 
-                // Reset form
-                form.reset();
-                document.getElementById('form-progress').style.width = '0%';
-                
-                // Reset validation states
-                document.querySelectorAll('.is-valid, .is-invalid').forEach(el => {
-                    el.classList.remove('is-valid', 'is-invalid');
-                });
-            }, 1000);
-        }
+                // Simulate API call
+                setTimeout(function() {
+                    // Show success message
+                    document.getElementById('success-message').classList.add('active');
+                    createConfetti();
+                    
+                    // Reset form
+                    form.reset();
+                    document.getElementById('form-progress').style.width = '0%';
+                    
+                    // Reset button
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                }, 2000);
+            }
+        });
 
         function validateForm() {
             let isValid = true;
-            const requiredFields = document.querySelectorAll('#registration [required]');
+            const requiredFields = form.querySelectorAll('[required]');
             
             // Validate required fields
             requiredFields.forEach(function(field) {
@@ -2659,8 +2582,8 @@
 
         // Update form progress as user fills it
         function updateFormProgress() {
-            const formFields = document.querySelectorAll('#registration input, #registration select, #registration textarea');
-            const requiredFields = document.querySelectorAll('#registration [required]');
+            const formFields = form.querySelectorAll('input, select, textarea');
+            const requiredFields = form.querySelectorAll('[required]');
             
             formFields.forEach(function(field) {
                 field.addEventListener('input', function() {
